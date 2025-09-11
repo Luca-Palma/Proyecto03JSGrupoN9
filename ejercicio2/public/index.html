@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Mascotas</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Registro de Mascotas</h1>
+  <p class="subtitulo">Registra las mascotas de tus clientes y lleva un control de su estado de vacunación.</p>
+
+  <div class="form-container">
+    <label for="nombreMascota">Nombre de la mascota:</label>
+    <input type="text" id="nombreMascota">
+
+    <label for="tipoMascota">Tipo de mascota:</label>
+    <select id="tipoMascota">
+      <option value="">Selecciona...</option>
+      <option>Perro</option>
+      <option>Gato</option>
+      <option>Conejo</option>
+      <option>Pájaro</option>
+      <option>Otro</option>
+    </select>
+
+    <label for="edadMascota">Edad (años):</label>
+    <input type="number" id="edadMascota" min="0">
+
+    <label for="duenioMascota">Nombre del dueño:</label>
+    <input type="text" id="duenioMascota">
+
+    <label>¿Está vacunada?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="vacunada" value="si"> Sí</label>
+      <label><input type="radio" name="vacunada" value="no"> No</label>
+    </div>
+
+    <button onclick="registrarMascota()">Registrar Mascota</button>
+  </div>
+
+  <div class="list-container">
+    <h2>Mascotas Registradas</h2>
+    <div id="listaMascotas"></div>
+    <div id="resumen"></div>
+  </div>
+
+  <!-- Archivos JS en orden -->
+  <script src="../src/data.js"></script>
+  <script src="../src/dom.js"></script>
+  <script src="../src/app.js"></script>
+</body>
+</html>
