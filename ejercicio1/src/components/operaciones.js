@@ -1,6 +1,13 @@
-/* Sirve pero solo con una incognita que no este entre los numeros
-Funcion con solo un digito en el numero */
-export function hallarX(n1, n2, n3) {
+/*Funcion que encuentra donde esta la incognita*/
+export function dondeX(numeros){
+    return numeros.findIndex(n => n.includes("x"));
+
+}
+
+
+/* Función que recibe tres numeros y halla la x que se encuentra en uno de ellos */
+/*export function hallarX(num1, num2, num3) {
+    
     let x;
 
     if (isNaN(n1) && !isNaN(n2) && !isNaN(n3)) {
@@ -15,3 +22,4 @@ export function hallarX(n1, n2, n3) {
 
     return x;
 }
+*/
