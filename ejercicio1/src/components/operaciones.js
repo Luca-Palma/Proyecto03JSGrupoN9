@@ -1,25 +1,38 @@
-/*Funcion que encuentra donde esta la incognita*/
-export function dondeX(numeros){
+/*Funcion que encuentra donde esta la incognita,
+y devuelve la posicion, que se usara el hallarX
+*/
+function dondeX(numeros){
     return numeros.findIndex(n => n.includes("x"));
 
 }
-
-
 /* Función que recibe tres numeros y halla la x que se encuentra en uno de ellos */
-/*export function hallarX(num1, num2, num3) {
-    
-    let x;
+export function hallarX(numeros) {
 
-    if (isNaN(n1) && !isNaN(n2) && !isNaN(n3)) {
-        x = n3 - n2;
-    } else if (!isNaN(n1) && isNaN(n2) && !isNaN(n3)) {
-        x = n3 - n1;
-    } else if (!isNaN(n1) && !isNaN(n2) && isNaN(n3)) {
-        x = n1 + n2;
-    } else {
-       x = n1 + n2 === n3 ? "No hay incógnita" : "Datos incorrectos";
+    let pos = dondeX(numeros);
+    let x1; //auxiliar para comparar
+    let x; //la incognita
+
+    switch (pos){
+        case 0:
+            x1 = parseInt(numeros[2])-parseInt(numeros[1]);
+            break;
+        case 1:
+            x1 = parseInt(numeros[2])-parseInt(numeros[0]);
+            break;
+        case 2:
+            x1 = parseInt(numeros[0])+parseInt(numeros[1]);
+            break;      
     }
-
-    return x;
+    /*Compara si el numero ingresado y el calculado tienen igual longitud
+    y encuentra en que valor difieren
+    */
+    if (numeros[pos].length !== String(x1).length){
+        return x = "Datos incorrectos";
+    } else {
+        for(let i = 0; i < numeros[pos].length; i++){
+            if(numeros[pos][i] !== String(x1)[i]){
+                return x = String(x1)[i];
+            }
+        }
+    }
 }
-*/
