@@ -11,10 +11,10 @@
 
   <div class="form-container">
     <label for="nombreMascota">Nombre de la mascota:</label>
-    <input type="text" id="nombreMascota">
+    <input type="text" id="nombreMascota" name="nombreMascota" required>
 
     <label for="tipoMascota">Tipo de mascota:</label>
-    <select id="tipoMascota">
+    <select id="tipoMascota" name="tipoMascota" required>
       <option value="">Selecciona...</option>
       <option>Perro</option>
       <option>Gato</option>
@@ -24,10 +24,10 @@
     </select>
 
     <label for="edadMascota">Edad (años):</label>
-    <input type="number" id="edadMascota" min="0">
+    <input type="number" id="edadMascota" min="0" name="edadMascota" required>
 
     <label for="duenioMascota">Nombre del dueño:</label>
-    <input type="text" id="duenioMascota">
+    <input type="text" id="duenioMascota" name="duenioMascota" required>
 
     <label>¿Está vacunada?</label>
     <div class="radio-group">
@@ -37,6 +37,7 @@
 
     <button onclick="registrarMascota()">Registrar Mascota</button>
   </div>
+   
 
   <div class="list-container">
     <h2>Mascotas Registradas</h2>

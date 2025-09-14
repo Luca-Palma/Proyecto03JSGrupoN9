@@ -19,8 +19,7 @@ function registrarMascota() {
     duenio,
     vacunada: vacunada.value === "si"
   };
-
-  agregarMascota(mascota);
   mostrarMascotas();
+  agregarMascota(mascota);
   limpiarFormulario();
 }
