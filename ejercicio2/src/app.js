@@ -11,6 +11,7 @@ function registrarMascota() {
     alert("Por favor, completa todos los campos.");
     return;
   }
+  
 
   const mascota = {
     nombre,
